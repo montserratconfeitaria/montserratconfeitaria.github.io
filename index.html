@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>E-books Mont Serrat Confeitaria</title>
+<meta name="description" content="E-books de confeitaria da Pollyana Monte Serrate: recheios, massa amanteigada e confeitaria para iniciantes, com receitas testadas no ateliê.">
+<meta property="og:title" content="E-books Mont Serrat Confeitaria">
+<meta property="og:description" content="Recheios, massa amanteigada e confeitaria para iniciantes, com receitas testadas no ateliê.">
+<meta property="og:image" content="https://montserratconfeitaria.github.io/img/compartilhar.jpg">
+<meta property="og:url" content="https://montserratconfeitaria.github.io/">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --marrom: #3d2219; --marrom-2: #5a3825; --caramelo: #e8c7a0; --creme: #fbf4ee;
+    --rose: #b5838d; --texto: #3b2418; --suave: #7a6253; --branco: #fff;
+  }
+  * { box-sizing: border-box; margin: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: Montserrat, Arial, sans-serif; color: var(--texto); background: var(--creme); line-height: 1.55; }
+  img { max-width: 100%; height: auto; display: block; }
+  a { color: inherit; }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 20px; }
+  h1, h2, h3 { font-family: "Playfair Display", Georgia, serif; line-height: 1.12; color: var(--marrom); }
+
+  header { background: var(--branco); border-bottom: 1px solid #eadfd6; }
+  header .wrap { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+  .marca { font-weight: 700; letter-spacing: 3px; font-size: 13px; text-transform: uppercase; color: var(--marrom); text-decoration: none; }
+  .ig { font-size: 14px; font-weight: 700; color: var(--marrom-2); text-decoration: none; }
+
+  .hero { padding: 44px 0 36px; }
+  .hero .wrap { display: grid; gap: 28px; align-items: center; }
+  .kicker { display: inline-block; background: #f3e4d6; color: var(--marrom-2); font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 7px 14px; border-radius: 999px; }
+  .hero h1 { font-size: 38px; margin: 16px 0 14px; }
+  .hero p { font-size: 17px; color: var(--suave); }
+  .hero .kit img { border-radius: 18px; box-shadow: 0 18px 40px rgba(61, 34, 25, .25); }
+  .legenda { font-size: 12px; color: var(--suave); margin-top: 8px; text-align: center; }
+
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: var(--marrom); color: var(--branco); text-decoration: none; font-weight: 700; font-size: 17px; padding: 16px 26px; border-radius: 14px; box-shadow: 0 8px 20px rgba(61, 34, 25, .25); transition: transform .15s ease; }
+  .btn:hover { transform: translateY(-2px); }
+  .btn-claro { background: var(--branco); color: var(--marrom); border: 2px solid var(--marrom); box-shadow: none; }
+  .hero .btn { margin-top: 22px; }
+
+  section { padding: 48px 0; }
+  .titulo-sec { text-align: center; margin-bottom: 28px; }
+  .titulo-sec h2 { font-size: 30px; }
+  .titulo-sec p { color: var(--suave); margin-top: 8px; }
+
+  .livros { display: grid; gap: 22px; }
+  .livro { background: var(--branco); border-radius: 22px; overflow: hidden; box-shadow: 0 10px 30px rgba(61, 34, 25, .1); display: grid; }
+  .livro .capa { background: #efe3d8; padding: 22px; display: flex; justify-content: center; }
+  .livro .capa img { width: 220px; border-radius: 8px; box-shadow: 0 12px 26px rgba(0, 0, 0, .3); }
+  .livro .info { padding: 22px 22px 26px; display: flex; flex-direction: column; }
+  .livro h3 { font-size: 26px; }
+  .livro .resumo { color: var(--suave); margin: 8px 0 14px; }
+  .livro ul { padding-left: 20px; margin-bottom: 18px; }
+  .livro li { margin-bottom: 6px; }
+  .preco { font-family: "Playfair Display", Georgia, serif; font-size: 34px; font-weight: 900; color: var(--marrom); }
+  .preco small { display: block; margin-top: 2px; font-family: Montserrat, Arial, sans-serif; font-size: 14px; font-weight: 500; color: var(--suave); }
+  .livro .btn { margin-top: 14px; width: 100%; }
+  .seguro { font-size: 12px; color: var(--suave); text-align: center; margin-top: 10px; }
+  .selo { display: inline-block; background: var(--caramelo); color: var(--marrom); font-size: 12px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; padding: 5px 12px; border-radius: 999px; margin-bottom: 10px; align-self: flex-start; }
+
+  .passos { display: grid; gap: 16px; }
+  .passo { background: var(--branco); border-radius: 18px; padding: 22px; text-align: center; }
+  .passo b { display: inline-flex; width: 40px; height: 40px; border-radius: 50%; background: var(--marrom); color: var(--branco); align-items: center; justify-content: center; margin-bottom: 10px; }
+
+  .autora { background: var(--marrom); color: #f5e9df; }
+  .autora .wrap { display: grid; gap: 26px; align-items: center; justify-items: center; text-align: center; }
+  .autora img { width: 220px; height: 220px; border-radius: 50%; border: 6px solid var(--caramelo); object-fit: cover; }
+  .autora .kicker { background: rgba(232, 199, 160, .18); color: var(--caramelo); }
+  .autora h2 { color: var(--branco); font-size: 32px; margin: 12px 0; }
+  .autora p { margin-bottom: 12px; }
+
+  .garantia { text-align: center; }
+  .garantia .caixa { background: var(--branco); border-radius: 22px; padding: 30px 24px; max-width: 640px; margin: 0 auto; border: 2px dashed var(--caramelo); }
+  .garantia h2 { font-size: 28px; margin-bottom: 10px; }
+
+  .faq details { background: var(--branco); border-radius: 14px; padding: 18px 20px; margin-bottom: 12px; }
+  .faq summary { font-weight: 700; cursor: pointer; list-style: none; }
+  .faq summary::after { content: "+"; float: right; color: var(--rose); font-size: 20px; line-height: 1; }
+  .faq details[open] summary::after { content: "–"; }
+  .faq details p { margin-top: 10px; color: var(--suave); }
+
+  footer { background: #2a160f; color: #cdb8a9; font-size: 13px; padding: 28px 0; text-align: center; }
+  footer a { color: var(--caramelo); }
+  footer p + p { margin-top: 6px; }
+
+  @media (min-width: 820px) {
+    .hero .wrap { grid-template-columns: 1.1fr .9fr; }
+    .hero h1 { font-size: 52px; }
+    .livro { grid-template-columns: 300px 1fr; }
+    .livro .capa { padding: 30px; align-items: center; }
+    .livro .info { padding: 32px; }
+    .passos { grid-template-columns: repeat(3, 1fr); }
+    .autora .wrap { grid-template-columns: 260px 1fr; justify-items: start; text-align: left; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="marca" href="#">Mont Serrat Confeitaria</a>
+    <a class="ig" href="https://instagram.com/montserratconfeitaria" target="_blank" rel="noopener">@montserratconfeitaria</a>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <div>
+      <span class="kicker">E-books de confeitaria</span>
+      <h1>Receitas testadas no ateliê, do jeito que a gente faz</h1>
+      <p>Massa, recheio e confeitagem com as quantidades em gramas e o ponto certo de cada receita. Escolha o seu e receba o PDF no e-mail logo após o pagamento.</p>
+      <a class="btn" href="#ebooks">Ver os e-books ↓</a>
+    </div>
+    <div class="kit">
+      <img src="img/kit.jpg" alt="Capas dos três e-books da Mont Serrat Confeitaria" width="900" height="900">
+      <p class="legenda">Imagens ilustrativas</p>
+    </div>
+  </div>
+</div>
+
+<section id="ebooks">
+  <div class="wrap">
+    <div class="titulo-sec">
+      <h2>Escolha o seu e-book</h2>
+      <p>Pagamento seguro pela Hotmart, com garantia de 7 dias.</p>
+    </div>
+
+    <div class="livros">
+      <article class="livro">
+        <div class="capa"><img src="img/recheios-de-sucesso.jpg" alt="Capa do e-book Recheios de Sucesso" width="640" height="960" loading="lazy"></div>
+        <div class="info">
+          <span class="selo">Mais procurado</span>
+          <h3>Recheios de Sucesso</h3>
+          <p class="resumo">25 receitas de brigadeiros gourmet, recheios cremosos e ganaches, com o ponto certo de cada uma.</p>
+          <ul>
+            <li>9 brigadeiros gourmet para rechear bolos</li>
+            <li>7 recheios cremosos e 9 ganaches</li>
+            <li>Quanto recheio usar por camada, das formas de 15 a 30 cm</li>
+            <li>Tempo de descanso das ganaches para recheio, cobertura e trufas</li>
+          </ul>
+          <div class="preco">R$ 27,90 <small>e-book em PDF, 35 páginas</small></div>
+          <a class="btn" href="https://pay.hotmart.com/Q108307662R">Quero o Recheios de Sucesso</a>
+          <p class="seguro">Pagamento pela Hotmart · Garantia de 7 dias</p>
+        </div>
+      </article>
+
+      <article class="livro">
+        <div class="capa"><img src="img/confeitaria-para-iniciantes.jpg" alt="Capa do e-book Confeitaria para Iniciantes" width="640" height="960" loading="lazy"></div>
+        <div class="info">
+          <span class="selo">Para começar do zero</span>
+          <h3>Confeitaria para Iniciantes</h3>
+          <p class="resumo">Do zero ao bolo confeitado, em 9 capítulos, na ordem em que você vai precisar.</p>
+          <ul>
+            <li>Higiene, calda de açúcar, merengues e pavlova</li>
+            <li>10 famílias de bicos de confeitar, com fotos</li>
+            <li>Glacê real, pães de ló e massas amanteigadas</li>
+            <li>Brigadeiros, ganache e chantininho</li>
+          </ul>
+          <div class="preco">R$ 37,90 <small>e-book em PDF, 41 páginas</small></div>
+          <a class="btn" href="https://pay.hotmart.com/Y108308531Q">Quero o Confeitaria para Iniciantes</a>
+          <p class="seguro">Pagamento pela Hotmart · Garantia de 7 dias</p>
+        </div>
+      </article>
+
+      <article class="livro">
+        <div class="capa"><img src="img/massa-amanteigada-perfeita.jpg" alt="Capa do e-book Massa Amanteigada Perfeita" width="640" height="960" loading="lazy"></div>
+        <div class="info">
+          <span class="selo">Melhor preço</span>
+          <h3>Massa Amanteigada Perfeita</h3>
+          <p class="resumo">1 massa base e 10 sabores, com rendimento, durabilidade e quanto de massa usar em cada forma.</p>
+          <ul>
+            <li>Massa base de baunilha, passo a passo</li>
+            <li>9 variações: cacau com rum, nozes, pistache, coco, red velvet e outras</li>
+            <li>Tempo e temperatura de forno em todas as receitas</li>
+            <li>Tabela de quanto de massa usar nas formas de 10 a 30 cm</li>
+          </ul>
+          <div class="preco">R$ 19,90 <small>e-book em PDF, 18 páginas</small></div>
+          <a class="btn" href="https://pay.hotmart.com/L108308279R">Quero o Massa Amanteigada</a>
+          <p class="seguro">Pagamento pela Hotmart · Garantia de 7 dias</p>
+        </div>
+      </article>
+
+      <!-- KIT: descomente quando o link do kit estiver ativo na Hotmart e troque LINK_DO_KIT
+      <article class="livro">
+        <div class="capa"><img src="img/kit.jpg" alt="Kit com os três e-books" width="900" height="900" loading="lazy"></div>
+        <div class="info">
+          <span class="selo">Os 3 juntos</span>
+          <h3>Kit com os 3 e-books</h3>
+          <p class="resumo">Confeitaria para Iniciantes, Massa Amanteigada Perfeita e Recheios de Sucesso: massa, recheio e confeitagem.</p>
+          <div class="preco">R$ 59,90 <small>separados custam R$ 85,70</small></div>
+          <a class="btn" href="LINK_DO_KIT">Quero o kit completo</a>
+          <p class="seguro">Pagamento pela Hotmart · Garantia de 7 dias</p>
+        </div>
+      </article>
+      -->
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="titulo-sec"><h2>Como funciona</h2></div>
+    <div class="passos">
+      <div class="passo"><b>1</b><p>Escolha o e-book e clique no botão de compra.</p></div>
+      <div class="passo"><b>2</b><p>Pague com segurança na Hotmart, com as formas de pagamento que aparecerem para você.</p></div>
+      <div class="passo"><b>3</b><p>Receba o acesso por e-mail e baixe o PDF no celular ou no computador.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="autora">
+  <div class="wrap">
+    <img src="img/polly.jpg" alt="Pollyana Monte Serrate segurando doces" width="480" height="480" loading="lazy">
+    <div>
+      <span class="kicker">Conheça a autora</span>
+      <h2>Pollyana Monte Serrate</h2>
+      <p>Em junho de 2012 comecei a produzir bolos e doces para a família e os amigos. A paixão pela confeitaria só aumentava e, com o passar dos anos, fui atrás de cursos e especializações.</p>
+      <p>Hoje sinto que tenho uma missão: tornar essa jornada mais leve para você que, assim como eu, sonha em viver da confeitaria e ter a sua profissão reconhecida.</p>
+    </div>
+  </div>
+</section>
+
+<section class="garantia">
+  <div class="wrap">
+    <div class="caixa">
+      <h2>Garantia de 7 dias</h2>
+      <p>Se o e-book não atender ao que você esperava, peça o reembolso pela própria Hotmart em até 7 dias, sem precisar explicar o motivo.</p>
+    </div>
+  </div>
+</section>
+
+<section class="faq">
+  <div class="wrap">
+    <div class="titulo-sec"><h2>Perguntas frequentes</h2></div>
+    <details><summary>Como recebo o e-book?</summary><p>Logo após a confirmação do pagamento, você recebe o acesso por e-mail e pode baixar o PDF no celular, tablet ou computador.</p></details>
+    <details><summary>Quais formas de pagamento posso usar?</summary><p>O pagamento é feito na Hotmart, que mostra as opções disponíveis no momento da compra.</p></details>
+    <details><summary>E se eu não gostar?</summary><p>Você tem 7 dias de garantia para pedir o reembolso pela Hotmart.</p></details>
+    <details><summary>Preciso ter experiência?</summary><p>Não. O Confeitaria para Iniciantes começa do básico. Os outros dois trazem as quantidades em gramas e o passo a passo de cada receita.</p></details>
+    <details><summary>As fotos são dos doces do e-book?</summary><p>As fotos das capas são imagens ilustrativas. As receitas são as que usamos no ateliê da Mont Serrat Confeitaria.</p></details>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>© 2026 Pollyana Monte Serrate · Mont Serrat Confeitaria. Todos os direitos reservados. Imagens ilustrativas.</p>
+    <p>Instagram: <a href="https://instagram.com/montserratconfeitaria" target="_blank" rel="noopener">@montserratconfeitaria</a></p>
+    <p>Este site não é afiliado ao Instagram, ao Facebook ou à Meta.</p>
+  </div>
+</footer>
+
+</body>
+</html>
